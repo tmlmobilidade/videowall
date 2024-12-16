@@ -55,7 +55,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: npm i --omit=dev --force
+        run: npm install --omit-dev --force
+      - name: Bump version
+        run: npx @helperkits/bumper bump
       - name: Build with Next.js
         run: npm run build
       - name: Upload artifact
