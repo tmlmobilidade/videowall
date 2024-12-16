@@ -4,7 +4,7 @@
 
 import { CardDefault } from '@/components/CardDefault';
 import { Grid } from '@/components/Grid';
-import { IconCircleCheckFilled } from '@tabler/icons-react';
+import { IconBusOff } from '@tabler/icons-react';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -79,7 +79,7 @@ export function Screen2() {
 			layout="primaryWithFourDetails"
 			cells={[
 				<CardDefault
-					icon={<IconCircleCheckFilled />}
+					icon={<IconBusOff />}
 					isLoading={slaLoading}
 					isValidating={slaValidating}
 					sentiment={slaCmParsed.secondary_value > 0.05 ? 'bad' : 'good'}
@@ -89,7 +89,7 @@ export function Screen2() {
 					valueSecondary={slaCmParsed.secondary_value_string}
 				/>,
 				<CardDefault
-					icon={<IconCircleCheckFilled />}
+					icon={<IconBusOff />}
 					isLoading={slaLoading}
 					isValidating={slaValidating}
 					sentiment={sla41Parsed.secondary_value > 0.05 ? 'bad' : 'good'}
@@ -99,7 +99,7 @@ export function Screen2() {
 					valueSecondary={sla41Parsed.secondary_value_string}
 				/>,
 				<CardDefault
-					icon={<IconCircleCheckFilled />}
+					icon={<IconBusOff />}
 					isLoading={slaLoading}
 					isValidating={slaValidating}
 					sentiment={sla42Parsed.secondary_value > 0.05 ? 'bad' : 'good'}
@@ -109,7 +109,7 @@ export function Screen2() {
 					valueSecondary={sla42Parsed.secondary_value_string}
 				/>,
 				<CardDefault
-					icon={<IconCircleCheckFilled />}
+					icon={<IconBusOff />}
 					isLoading={slaLoading}
 					isValidating={slaValidating}
 					sentiment={sla43Parsed.secondary_value > 0.05 ? 'bad' : 'good'}
@@ -119,7 +119,7 @@ export function Screen2() {
 					valueSecondary={sla43Parsed.secondary_value_string}
 				/>,
 				<CardDefault
-					icon={<IconCircleCheckFilled />}
+					icon={<IconBusOff />}
 					isLoading={slaLoading}
 					isValidating={slaValidating}
 					sentiment={sla44Parsed.secondary_value > 0.05 ? 'bad' : 'good'}

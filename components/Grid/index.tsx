@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 
 interface Props {
 	cells: React.ReactNode[]
-	layout: 'primaryWithFourDetails' | 'twoDetailsWithPrimary'
+	layout: 'primaryWithFourDetails' | 'sixDetails' | 'twoDetailsWithPrimary'
 }
 
 /* * */

@@ -36,6 +36,10 @@
 	grid-area: five;
 }
 
+.cell:nth-child(6) {
+	grid-area: six;
+}
+
 
 /* * */
 /* LAYOUTS */
@@ -52,4 +56,11 @@
 		"one two" 1fr
 		"three four" 1fr
 		"five five" 1fr / 1fr 1fr;
+}
+
+.sixDetails {
+	grid-template:
+		"one two" 1fr
+		"three four" 1fr
+		"five six" 1fr / 1fr 1fr;
 }
