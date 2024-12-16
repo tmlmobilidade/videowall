@@ -23,9 +23,11 @@ export function Screen3() {
 
 	const delaysCmOverview = useMemo(() => {
 		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
+		const formattedSeconds = delaysData.data._cm_average_delay_minutes * 60 % 60;
+		const formattedMinutes = delaysData.data._cm_average_delay_minutes - formattedSeconds / 60;
 		return {
 			primary_value: delaysData.data._cm_average_delay_minutes,
-			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._cm_average_delay_minutes)} min`,
+			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(formattedMinutes)}m ${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(formattedSeconds)}s`,
 			secondary_value: delaysData.data._cm_average_delay_minutes,
 			secondary_value_string: delaysData.data._cm_total_until_now_count,
 		};
