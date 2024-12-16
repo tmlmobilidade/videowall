@@ -4,7 +4,7 @@
 
 import { CardDefault } from '@/components/CardDefault';
 import { Grid } from '@/components/Grid';
-import { IconCircleCheckFilled } from '@tabler/icons-react';
+import { IconUserX } from '@tabler/icons-react';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -39,7 +39,7 @@ export function Screen4() {
 			layout="twoDetailsWithPrimary"
 			cells={[
 				<CardDefault
-					icon={<IconCircleCheckFilled />}
+					icon={<IconUserX />}
 					isLoading={emptyRidesLoading}
 					isValidating={emptyRidesValidating}
 					sentiment="normal"
