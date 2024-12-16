@@ -3,6 +3,7 @@
 /* * */
 
 import { CardDefault } from '@/components/CardDefault';
+import { Clock } from '@/components/Clock';
 import { Grid } from '@/components/Grid';
 import { IconUserX } from '@tabler/icons-react';
 import { useMemo } from 'react';
@@ -36,7 +37,7 @@ export function Screen4() {
 
 	return (
 		<Grid
-			layout="twoDetailsWithPrimary"
+			layout="sixDetails"
 			cells={[
 				<CardDefault
 					icon={<IconUserX />}
@@ -48,6 +49,11 @@ export function Screen4() {
 					valuePrimary={emptyRidesCmParsed.primary_value_string}
 					valueSecondary={emptyRidesCmParsed.secondary_value_string}
 				/>,
+				<></>,
+				<></>,
+				<></>,
+				<></>,
+				<Clock />,
 			]}
 		/>
 	);

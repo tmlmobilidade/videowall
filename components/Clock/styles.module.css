@@ -6,6 +6,11 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-start;
+	height: 100%;
+	padding: 20px;
+	background-color: rgb(10 10 10);
+	border: 3px solid rgb(20 20 20);
+	border-radius: 5px;
 }
 
 /* * */
@@ -15,12 +20,11 @@
 	font-size: 120px;
 	font-weight: 800;
 	line-height: 1;
-	color: #000;
+	color: #fff;
 }
 
-
 .seconds {
-	font-size: 60px;
 	margin-top: 45px;
+	font-size: 60px;
 	opacity: 0.25;
 }

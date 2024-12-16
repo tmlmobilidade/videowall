@@ -2,6 +2,7 @@
 
 /* * */
 
+import { Compliance } from '@/components/Compliance';
 import { Screen1 } from '@/screens/Screen1';
 import { Screen2 } from '@/screens/Screen2';
 import { Screen3 } from '@/screens/Screen3';
@@ -19,6 +20,7 @@ export function AllScreens() {
 			<Screen2 />
 			<Screen3 />
 			<Screen4 />
+			<Compliance />,
 			<Snowfall snowflakeCount={40} speed={[0.5, 1]} wind={[0, 1]} />
 		</div>
 	);
