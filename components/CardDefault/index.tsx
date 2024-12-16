@@ -1,7 +1,8 @@
 /* * */
 
+import { CardDefaultSkeleton } from '@/components/CardDefaultSkeleton';
 import { TimestampDisplay } from '@/components/TimestampDisplay';
-import { Loader, Skeleton } from '@mantine/core';
+import { Loader } from '@mantine/core';
 
 import styles from './styles.module.css';
 
@@ -26,7 +27,7 @@ export function CardDefault({ icon, isLoading = false, isValidating = false, sen
 
 	if (isLoading) {
 		return (
-			<Skeleton h="100%" w="100%" />
+			<CardDefaultSkeleton />
 		);
 	}
 
