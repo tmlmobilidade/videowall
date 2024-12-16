@@ -1,55 +1,55 @@
-name: 'Videowall | Build & Test'
+# name: 'Videowall | Build & Test'
 
-on:
-  push:
-    branches:
-      - production
+# on:
+#   push:
+#     branches:
+#       - production
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# permissions:
+#   contents: read
+#   pages: write
+#   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+# concurrency:
+#   group: "pages"
+#   cancel-in-progress: false
 
-jobs:
+# jobs:
 
-  # # # # # # # # # # # # # # # # # # # # #
-  # # # # # # # # # # # # # # # # # # # # #
+#   # # # # # # # # # # # # # # # # # # # # #
+#   # # # # # # # # # # # # # # # # # # # # #
 
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-    permissions:
-      contents: read
-      packages: write
+#   build:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       fail-fast: false
+#     permissions:
+#       contents: read
+#       packages: write
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@main
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@main
 
-      - name: Setup Node.js ⚙️
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+#       - name: Setup Node.js ⚙️
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
 
-      - name: Install dependencies 🔧
-        shell: bash
-        run: npm install --omit-dev --force
+#       - name: Install dependencies 🔧
+#         shell: bash
+#         run: npm install --omit-dev --force
 
-  # # # # # # # # # # # # # # # # # # # # #
-  # # # # # # # # # # # # # # # # # # # # #
+#   # # # # # # # # # # # # # # # # # # # # #
+#   # # # # # # # # # # # # # # # # # # # # #
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Publish to GitHub Pages 🚀
-        id: deployment
-        uses: actions/deploy-pages@v4
+#   deploy:
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+#     runs-on: ubuntu-latest
+#     needs: build
+#     steps:
+#       - name: Publish to GitHub Pages 🚀
+#         id: deployment
+#         uses: actions/deploy-pages@v4
