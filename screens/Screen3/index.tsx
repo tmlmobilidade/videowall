@@ -29,7 +29,7 @@ export function Screen3() {
 			primary_value: delaysData.data._cm_average_delay_minutes,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(formattedMinutes)}m ${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(formattedSeconds)}s`,
 			secondary_value: delaysData.data._cm_average_delay_minutes,
-			secondary_value_string: delaysData.data._cm_total_until_now_count,
+			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._cm_total_until_now_count)}`,
 		};
 	}, [delaysData]);
 
@@ -39,7 +39,7 @@ export function Screen3() {
 			primary_value: delaysData.data._cm_delayed_for_more_than_five_minutes_count / delaysData.data._cm_total_until_now_count,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._cm_delayed_for_more_than_five_minutes_count / delaysData.data._cm_total_until_now_count * 100)}%`,
 			secondary_value: delaysData.data._cm_delayed_for_more_than_five_minutes_count,
-			secondary_value_string: delaysData.data._cm_delayed_for_more_than_five_minutes_count,
+			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._cm_delayed_for_more_than_five_minutes_count)}`,
 		};
 	}, [delaysData]);
 
@@ -49,7 +49,7 @@ export function Screen3() {
 			primary_value: delaysData.data._41_delayed_for_more_than_five_minutes_count / delaysData.data._41_total_until_now_count,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._41_delayed_for_more_than_five_minutes_count / delaysData.data._41_total_until_now_count * 100)}%`,
 			secondary_value: delaysData.data._41_delayed_for_more_than_five_minutes_count,
-			secondary_value_string: delaysData.data._41_delayed_for_more_than_five_minutes_count,
+			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._41_delayed_for_more_than_five_minutes_count)}`,
 		};
 	}, [delaysData]);
 
@@ -59,7 +59,7 @@ export function Screen3() {
 			primary_value: delaysData.data._42_delayed_for_more_than_five_minutes_count / delaysData.data._42_total_until_now_count,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._42_delayed_for_more_than_five_minutes_count / delaysData.data._42_total_until_now_count * 100)}%`,
 			secondary_value: delaysData.data._42_delayed_for_more_than_five_minutes_count,
-			secondary_value_string: delaysData.data._42_delayed_for_more_than_five_minutes_count,
+			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._42_delayed_for_more_than_five_minutes_count)}`,
 		};
 	}, [delaysData]);
 
@@ -69,7 +69,7 @@ export function Screen3() {
 			primary_value: delaysData.data._43_delayed_for_more_than_five_minutes_count / delaysData.data._43_total_until_now_count,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._43_delayed_for_more_than_five_minutes_count / delaysData.data._43_total_until_now_count * 100)}%`,
 			secondary_value: delaysData.data._43_delayed_for_more_than_five_minutes_count,
-			secondary_value_string: delaysData.data._43_delayed_for_more_than_five_minutes_count,
+			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._43_delayed_for_more_than_five_minutes_count)}`,
 		};
 	}, [delaysData]);
 
@@ -79,7 +79,7 @@ export function Screen3() {
 			primary_value: delaysData.data._44_delayed_for_more_than_five_minutes_count / delaysData.data._44_total_until_now_count,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._44_delayed_for_more_than_five_minutes_count / delaysData.data._44_total_until_now_count * 100)}%`,
 			secondary_value: delaysData.data._44_delayed_for_more_than_five_minutes_count,
-			secondary_value_string: delaysData.data._44_delayed_for_more_than_five_minutes_count,
+			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._44_delayed_for_more_than_five_minutes_count)}`,
 		};
 	}, [delaysData]);
 
