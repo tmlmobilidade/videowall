@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 export function Compliance() {
 	return (
 		<div className={styles.container}>
-			<Image src="/portugal2020.jpg" />
+			<Image src="portugal2020.jpg" />
 		</div>
 	);
 }

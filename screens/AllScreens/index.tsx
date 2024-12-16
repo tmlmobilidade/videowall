@@ -20,7 +20,7 @@ export function AllScreens() {
 			<Screen2 />
 			<Screen3 />
 			<Screen4 />
-			<Compliance />,
+			<Compliance />
 			<Snowfall snowflakeCount={40} speed={[0.5, 1]} wind={[0, 1]} />
 		</div>
 	);
