@@ -3,7 +3,7 @@ name: 'Videowall | Build & Test'
 on:
   push:
     branches:
-      - master
+      - production
 
 permissions:
   contents: read
