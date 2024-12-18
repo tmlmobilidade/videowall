@@ -104,7 +104,7 @@ export function Screen3() {
 					icon={<IconClock />}
 					isLoading={delaysLoading}
 					isValidating={delaysValidating}
-					sentiment={delaysCmParsed.primary_value > 0.09 ? 'bad' : 'good'}
+					sentiment={delaysCmParsed.primary_value > 0.095 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="CM / Viagens atrasadas > 5 min"
 					valuePrimary={delaysCmParsed.primary_value_string}
@@ -114,7 +114,7 @@ export function Screen3() {
 					icon={<IconClock />}
 					isLoading={delaysLoading}
 					isValidating={delaysValidating}
-					sentiment={delays41Parsed.primary_value > 0.09 ? 'bad' : 'good'}
+					sentiment={delays41Parsed.primary_value > 0.095 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="41 / Viagens atrasadas > 5 min"
 					valuePrimary={delays41Parsed.primary_value_string}
@@ -124,7 +124,7 @@ export function Screen3() {
 					icon={<IconClock />}
 					isLoading={delaysLoading}
 					isValidating={delaysValidating}
-					sentiment={delays42Parsed.primary_value > 0.09 ? 'bad' : 'good'}
+					sentiment={delays42Parsed.primary_value > 0.095 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="42 / Viagens atrasadas > 5 min"
 					valuePrimary={delays42Parsed.primary_value_string}
@@ -134,7 +134,7 @@ export function Screen3() {
 					icon={<IconClock />}
 					isLoading={delaysLoading}
 					isValidating={delaysValidating}
-					sentiment={delays43Parsed.primary_value > 0.09 ? 'bad' : 'good'}
+					sentiment={delays43Parsed.primary_value > 0.095 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="43 / Viagens atrasadas > 5 min"
 					valuePrimary={delays43Parsed.primary_value_string}
@@ -144,7 +144,7 @@ export function Screen3() {
 					icon={<IconClock />}
 					isLoading={delaysLoading}
 					isValidating={delaysValidating}
-					sentiment={delays44Parsed.primary_value > 0.09 ? 'bad' : 'good'}
+					sentiment={delays44Parsed.primary_value > 0.095 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="44 / Viagens atrasadas > 5 min"
 					valuePrimary={delays44Parsed.primary_value_string}
