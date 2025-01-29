@@ -11,29 +11,33 @@
 	},
 	"dependencies": {
 		"@helperkits/logger": "20240703.1726.24",
-		"@mantine/charts": "7.15.1",
-		"@mantine/core": "7.15.1",
-		"@mantine/hooks": "7.15.1",
-		"@tabler/icons-react": "3.24.0",
-		"@tmlmobilidade/services": "20241213.1303.52",
+		"@mantine/charts": "7.16.2",
+		"@mantine/core": "7.16.2",
+		"@mantine/hooks": "7.16.2",
+		"@tabler/icons-react": "3.29.0",
+		"@tmlmobilidade/core": "20250129.43.21",
 		"luxon": "3.5.0",
-		"next": "15.1.0",
+		"next": "15.1.6",
 		"react": "19.0.0",
 		"react-dom": "19.0.0",
 		"react-snowfall": "^2.2.0",
-		"recharts": "2.15.0",
+		"recharts": "2.15.1",
 		"sharp": "0.33.5",
-		"swr": "2.2.5"
+		"swr": "2.3.0"
 	},
 	"devDependencies": {
-		"@carrismetropolitana/eslint": "20241024.1600.5",
+		"@carrismetropolitana/eslint": "20250128.1601.13",
 		"@types/luxon": "3.4.2",
-		"@types/node": "22.10.2",
-		"@types/react": "19.0.1",
-		"@types/react-dom": "19.0.2",
-		"postcss": "8.4.49",
+		"@types/node": "22.12.0",
+		"@types/react": "19.0.8",
+		"@types/react-dom": "19.0.3",
+		"postcss": "8.5.1",
 		"postcss-preset-mantine": "1.17.0",
 		"postcss-simple-vars": "7.0.1",
-		"typescript": "5.7.2"
+		"typescript": "5.7.3"
+	},
+	"overrides": {
+		"react": "19.0.0",
+		"react-dom": "19.0.0"
 	}
 }

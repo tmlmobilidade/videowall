@@ -39,16 +39,17 @@ export function Screen4() {
 		<Grid
 			layout="sixDetails"
 			cells={[
-				<CardDefault
-					icon={<IconUserX />}
-					isLoading={emptyRidesLoading}
-					isValidating={emptyRidesValidating}
-					sentiment="normal"
-					timestamp={emptyRidesData?.timestamp_resource}
-					title="CM / Viagens sem passageiros até agora"
-					valuePrimary={emptyRidesCmParsed.primary_value_string}
-					valueSecondary={emptyRidesCmParsed.secondary_value_string}
-				/>,
+				// <CardDefault
+				// 	icon={<IconUserX />}
+				// 	isLoading={emptyRidesLoading}
+				// 	isValidating={emptyRidesValidating}
+				// 	sentiment="normal"
+				// 	timestamp={emptyRidesData?.timestamp_resource}
+				// 	title="CM / Viagens sem passageiros até agora"
+				// 	valuePrimary={emptyRidesCmParsed.primary_value_string}
+				// 	valueSecondary={emptyRidesCmParsed.secondary_value_string}
+				// />,
+				<></>,
 				<></>,
 				<></>,
 				<></>,
