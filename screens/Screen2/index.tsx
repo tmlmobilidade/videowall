@@ -16,7 +16,7 @@ export function Screen2() {
 	//
 	// A. Fetch data
 
-	const { data: slaData, isLoading: slaLoading, isValidating: slaValidating } = useSWR('https://api.cmet.pt/metrics/videowall/sla');
+	const { data: slaData, isLoading: slaLoading, isValidating: slaValidating } = useSWR('https://api.carrismetropolitana.pt/v2/metrics/videowall/sla');
 
 	//
 	// B. Transform data

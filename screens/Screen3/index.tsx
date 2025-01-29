@@ -16,7 +16,7 @@ export function Screen3() {
 	//
 	// A. Fetch data
 
-	const { data: delaysData, isLoading: delaysLoading, isValidating: delaysValidating } = useSWR('https://api.cmet.pt/metrics/videowall/delays');
+	const { data: delaysData, isLoading: delaysLoading, isValidating: delaysValidating } = useSWR('https://api.carrismetropolitana.pt/v2/metrics/videowall/delays');
 
 	//
 	// B. Transform data

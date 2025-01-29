@@ -17,7 +17,7 @@ export function Screen4() {
 	//
 	// A. Fetch data
 
-	const { data: emptyRidesData, isLoading: emptyRidesLoading, isValidating: emptyRidesValidating } = useSWR('https://api.cmet.pt/metrics/videowall/empty-rides');
+	const { data: emptyRidesData, isLoading: emptyRidesLoading, isValidating: emptyRidesValidating } = useSWR('https://api.carrismetropolitana.pt/v2/metrics/videowall/empty-rides');
 
 	//
 	// B. Transform data
