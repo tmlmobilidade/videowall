@@ -24,50 +24,50 @@ export function Screen2() {
 	const slaCmParsed = useMemo(() => {
 		if (!slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '?%' };
 		return {
-			primary_value: slaData.data._cm_simple_three_events_fail_until_now,
-			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._cm_simple_three_events_fail_until_now),
-			secondary_value: slaData.data._cm_simple_three_events_fail_until_now / slaData.data._cm_scheduled_rides_until_now,
-			secondary_value_string: `${parseFloat(((slaData.data._cm_simple_three_events_fail_until_now * 100) / slaData.data._cm_scheduled_rides_until_now).toFixed(2))}%`,
+			primary_value: slaData.data._cm_simple_three_events_or_simple_one_validation_transaction_fail_until_now,
+			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._cm_simple_three_events_or_simple_one_validation_transaction_fail_until_now),
+			secondary_value: slaData.data._cm_simple_three_events_or_simple_one_validation_transaction_fail_until_now / slaData.data._cm_scheduled_rides_until_now,
+			secondary_value_string: `${parseFloat(((slaData.data._cm_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._cm_scheduled_rides_until_now).toFixed(2))}%`,
 		};
 	}, [slaData]);
 
 	const sla41Parsed = useMemo(() => {
 		if (!slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '?%' };
 		return {
-			primary_value: slaData.data._41_simple_three_events_fail_until_now,
-			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._41_simple_three_events_fail_until_now),
-			secondary_value: slaData.data._41_simple_three_events_fail_until_now / slaData.data._41_scheduled_rides_until_now,
-			secondary_value_string: `${parseFloat(((slaData.data._41_simple_three_events_fail_until_now * 100) / slaData.data._41_scheduled_rides_until_now).toFixed(2))}%`,
+			primary_value: slaData.data._41_simple_three_events_or_simple_one_validation_transaction_fail_until_now,
+			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._41_simple_three_events_or_simple_one_validation_transaction_fail_until_now),
+			secondary_value: slaData.data._41_simple_three_events_or_simple_one_validation_transaction_fail_until_now / slaData.data._41_scheduled_rides_until_now,
+			secondary_value_string: `${parseFloat(((slaData.data._41_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._41_scheduled_rides_until_now).toFixed(2))}%`,
 		};
 	}, [slaData]);
 
 	const sla42Parsed = useMemo(() => {
 		if (!slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '?%' };
 		return {
-			primary_value: slaData.data._42_simple_three_events_fail_until_now,
-			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._42_simple_three_events_fail_until_now),
-			secondary_value: slaData.data._42_simple_three_events_fail_until_now / slaData.data._42_scheduled_rides_until_now,
-			secondary_value_string: `${parseFloat(((slaData.data._42_simple_three_events_fail_until_now * 100) / slaData.data._42_scheduled_rides_until_now).toFixed(2))}%`,
+			primary_value: slaData.data._42_simple_three_events_or_simple_one_validation_transaction_fail_until_now,
+			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._42_simple_three_events_or_simple_one_validation_transaction_fail_until_now),
+			secondary_value: slaData.data._42_simple_three_events_or_simple_one_validation_transaction_fail_until_now / slaData.data._42_scheduled_rides_until_now,
+			secondary_value_string: `${parseFloat(((slaData.data._42_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._42_scheduled_rides_until_now).toFixed(2))}%`,
 		};
 	}, [slaData]);
 
 	const sla43Parsed = useMemo(() => {
 		if (!slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '?%' };
 		return {
-			primary_value: slaData.data._43_simple_three_events_fail_until_now,
-			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._43_simple_three_events_fail_until_now),
-			secondary_value: slaData.data._43_simple_three_events_fail_until_now / slaData.data._43_scheduled_rides_until_now,
-			secondary_value_string: `${parseFloat(((slaData.data._43_simple_three_events_fail_until_now * 100) / slaData.data._43_scheduled_rides_until_now).toFixed(2))}%`,
+			primary_value: slaData.data._43_simple_three_events_or_simple_one_validation_transaction_fail_until_now,
+			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._43_simple_three_events_or_simple_one_validation_transaction_fail_until_now),
+			secondary_value: slaData.data._43_simple_three_events_or_simple_one_validation_transaction_fail_until_now / slaData.data._43_scheduled_rides_until_now,
+			secondary_value_string: `${parseFloat(((slaData.data._43_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._43_scheduled_rides_until_now).toFixed(2))}%`,
 		};
 	}, [slaData]);
 
 	const sla44Parsed = useMemo(() => {
 		if (!slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '?%' };
 		return {
-			primary_value: slaData.data._44_simple_three_events_fail_until_now,
-			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._44_simple_three_events_fail_until_now),
-			secondary_value: slaData.data._44_simple_three_events_fail_until_now / slaData.data._44_scheduled_rides_until_now,
-			secondary_value_string: `${parseFloat(((slaData.data._44_simple_three_events_fail_until_now * 100) / slaData.data._44_scheduled_rides_until_now).toFixed(2))}%`,
+			primary_value: slaData.data._44_simple_three_events_or_simple_one_validation_transaction_fail_until_now,
+			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._44_simple_three_events_or_simple_one_validation_transaction_fail_until_now),
+			secondary_value: slaData.data._44_simple_three_events_or_simple_one_validation_transaction_fail_until_now / slaData.data._44_scheduled_rides_until_now,
+			secondary_value_string: `${parseFloat(((slaData.data._44_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._44_scheduled_rides_until_now).toFixed(2))}%`,
 		};
 	}, [slaData]);
 
