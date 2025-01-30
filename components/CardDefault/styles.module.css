@@ -69,14 +69,12 @@
 }
 
 .valuePrimary {
-	font-size: 60px;
 	font-weight: var(--font-weight-bold);
 	line-height: 1;
 	color: inherit;
 }
 
 .valueSecondary {
-	font-size: 30px;
 	font-weight: var(--font-weight-semibold);
 	line-height: 1;
 }
@@ -102,4 +100,24 @@
 
 .bad .footerWrapper {
 	color: var(--palette-orange-300);
+}
+
+
+/* * */
+/* SIZE */
+
+.lg .valuePrimary {
+	font-size: 60px;
+}
+
+.lg .valueSecondary {
+	font-size: 30px;
+}
+
+.md .valuePrimary {
+	font-size: 40px;
+}
+
+.md .valueSecondary {
+	font-size: 20px;
 }
