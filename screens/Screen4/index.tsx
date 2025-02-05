@@ -28,8 +28,8 @@ export function Screen4() {
 			primary_value: vkmData.data._cm_simple_three_events_or_simple_one_validation_transaction_vkm_until_now,
 			primary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._cm_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / 1000),
 			secondary_value: vkmData.data._cm_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / vkmData.data._cm_scheduled_vkm_until_now,
-			// secondary_value_string: `${parseFloat(((vkmData.data._cm_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._cm_scheduled_vkm_until_now).toFixed(2))}%`,
-			secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._cm_scheduled_vkm_until_now / 1000),
+			secondary_value_string: `${parseFloat(((vkmData.data._cm_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._cm_scheduled_vkm_until_now).toFixed(2))}%`,
+			// secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._cm_scheduled_vkm_until_now / 1000),
 		};
 	}, [vkmData]);
 
@@ -39,8 +39,8 @@ export function Screen4() {
 			primary_value: vkmData.data._41_simple_three_events_or_simple_one_validation_transaction_vkm_until_now,
 			primary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._41_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / 1000),
 			secondary_value: vkmData.data._41_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / vkmData.data._41_scheduled_vkm_until_now,
-			// secondary_value_string: `${parseFloat(((vkmData.data._41_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._41_scheduled_vkm_until_now).toFixed(2))}%`,
-			secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._41_scheduled_vkm_until_now / 1000),
+			secondary_value_string: `${parseFloat(((vkmData.data._41_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._41_scheduled_vkm_until_now).toFixed(2))}%`,
+			// secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._41_scheduled_vkm_until_now / 1000),
 		};
 	}, [vkmData]);
 
@@ -50,8 +50,8 @@ export function Screen4() {
 			primary_value: vkmData.data._42_simple_three_events_or_simple_one_validation_transaction_vkm_until_now,
 			primary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._42_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / 1000),
 			secondary_value: vkmData.data._42_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / vkmData.data._42_scheduled_vkm_until_now,
-			// secondary_value_string: `${parseFloat(((vkmData.data._42_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._42_scheduled_vkm_until_now).toFixed(2))}%`,
-			secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._42_scheduled_vkm_until_now / 1000),
+			secondary_value_string: `${parseFloat(((vkmData.data._42_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._42_scheduled_vkm_until_now).toFixed(2))}%`,
+			// secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._42_scheduled_vkm_until_now / 1000),
 		};
 	}, [vkmData]);
 
@@ -61,8 +61,8 @@ export function Screen4() {
 			primary_value: vkmData.data._43_simple_three_events_or_simple_one_validation_transaction_vkm_until_now,
 			primary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._43_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / 1000),
 			secondary_value: vkmData.data._43_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / vkmData.data._43_scheduled_vkm_until_now,
-			// secondary_value_string: `${parseFloat(((vkmData.data._43_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._43_scheduled_vkm_until_now).toFixed(2))}%`,
-			secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._43_scheduled_vkm_until_now / 1000),
+			secondary_value_string: `${parseFloat(((vkmData.data._43_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._43_scheduled_vkm_until_now).toFixed(2))}%`,
+			// secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._43_scheduled_vkm_until_now / 1000),
 		};
 	}, [vkmData]);
 
@@ -72,8 +72,8 @@ export function Screen4() {
 			primary_value: vkmData.data._44_simple_three_events_or_simple_one_validation_transaction_vkm_until_now,
 			primary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._44_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / 1000),
 			secondary_value: vkmData.data._44_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / vkmData.data._44_scheduled_vkm_until_now,
-			// secondary_value_string: `${parseFloat(((vkmData.data._44_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._44_scheduled_vkm_until_now).toFixed(2))}%`,
-			secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._44_scheduled_vkm_until_now / 1000),
+			secondary_value_string: `${parseFloat(((vkmData.data._44_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._44_scheduled_vkm_until_now).toFixed(2))}%`,
+			// secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._44_scheduled_vkm_until_now / 1000),
 		};
 	}, [vkmData]);
 

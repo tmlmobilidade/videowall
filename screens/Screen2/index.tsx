@@ -27,7 +27,7 @@ export function Screen2() {
 			primary_value: slaData.data._cm_simple_three_events_or_simple_one_validation_transaction_fail_until_now,
 			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._cm_simple_three_events_or_simple_one_validation_transaction_fail_until_now),
 			secondary_value: slaData.data._cm_simple_three_events_or_simple_one_validation_transaction_fail_until_now / slaData.data._cm_scheduled_rides_until_now,
-			secondary_value_string: `${parseFloat(((slaData.data._cm_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._cm_scheduled_rides_until_now).toFixed(2))}% de ${slaData.data._cm_scheduled_rides_until_now}`,
+			secondary_value_string: `${parseFloat(((slaData.data._cm_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._cm_scheduled_rides_until_now).toFixed(2))}% de ${slaData.data._cm_scheduled_rides_until_now} (${slaData.data._cm_scheduled_rides_total})`,
 		};
 	}, [slaData]);
 
@@ -37,7 +37,7 @@ export function Screen2() {
 			primary_value: slaData.data._41_simple_three_events_or_simple_one_validation_transaction_fail_until_now,
 			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._41_simple_three_events_or_simple_one_validation_transaction_fail_until_now),
 			secondary_value: slaData.data._41_simple_three_events_or_simple_one_validation_transaction_fail_until_now / slaData.data._41_scheduled_rides_until_now,
-			secondary_value_string: `${parseFloat(((slaData.data._41_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._41_scheduled_rides_until_now).toFixed(2))}% de ${slaData.data._41_scheduled_rides_until_now}`,
+			secondary_value_string: `${parseFloat(((slaData.data._41_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._41_scheduled_rides_until_now).toFixed(2))}% de ${slaData.data._41_scheduled_rides_until_now} (${slaData.data._41_scheduled_rides_total})`,
 		};
 	}, [slaData]);
 
@@ -47,7 +47,7 @@ export function Screen2() {
 			primary_value: slaData.data._42_simple_three_events_or_simple_one_validation_transaction_fail_until_now,
 			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._42_simple_three_events_or_simple_one_validation_transaction_fail_until_now),
 			secondary_value: slaData.data._42_simple_three_events_or_simple_one_validation_transaction_fail_until_now / slaData.data._42_scheduled_rides_until_now,
-			secondary_value_string: `${parseFloat(((slaData.data._42_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._42_scheduled_rides_until_now).toFixed(2))}% de ${slaData.data._42_scheduled_rides_until_now}`,
+			secondary_value_string: `${parseFloat(((slaData.data._42_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._42_scheduled_rides_until_now).toFixed(2))}% de ${slaData.data._42_scheduled_rides_until_now} (${slaData.data._42_scheduled_rides_total})`,
 		};
 	}, [slaData]);
 
@@ -57,7 +57,7 @@ export function Screen2() {
 			primary_value: slaData.data._43_simple_three_events_or_simple_one_validation_transaction_fail_until_now,
 			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._43_simple_three_events_or_simple_one_validation_transaction_fail_until_now),
 			secondary_value: slaData.data._43_simple_three_events_or_simple_one_validation_transaction_fail_until_now / slaData.data._43_scheduled_rides_until_now,
-			secondary_value_string: `${parseFloat(((slaData.data._43_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._43_scheduled_rides_until_now).toFixed(2))}% de ${slaData.data._43_scheduled_rides_until_now}`,
+			secondary_value_string: `${parseFloat(((slaData.data._43_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._43_scheduled_rides_until_now).toFixed(2))}% de ${slaData.data._43_scheduled_rides_until_now} (${slaData.data._43_scheduled_rides_total})`,
 		};
 	}, [slaData]);
 
@@ -67,7 +67,7 @@ export function Screen2() {
 			primary_value: slaData.data._44_simple_three_events_or_simple_one_validation_transaction_fail_until_now,
 			primary_value_string: Intl.NumberFormat('pt-PT').format(slaData.data._44_simple_three_events_or_simple_one_validation_transaction_fail_until_now),
 			secondary_value: slaData.data._44_simple_three_events_or_simple_one_validation_transaction_fail_until_now / slaData.data._44_scheduled_rides_until_now,
-			secondary_value_string: `${parseFloat(((slaData.data._44_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._44_scheduled_rides_until_now).toFixed(2))}% de ${slaData.data._44_scheduled_rides_until_now}`,
+			secondary_value_string: `${parseFloat(((slaData.data._44_simple_three_events_or_simple_one_validation_transaction_fail_until_now * 100) / slaData.data._44_scheduled_rides_until_now).toFixed(2))}% de ${slaData.data._44_scheduled_rides_until_now} (${slaData.data._44_scheduled_rides_total})`,
 		};
 	}, [slaData]);
 
