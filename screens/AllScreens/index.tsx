@@ -8,6 +8,7 @@ import { Screen2 } from '@/screens/Screen2';
 import { Screen3 } from '@/screens/Screen3';
 import { Screen4 } from '@/screens/Screen4';
 // import Snowfall from 'react-snowfall';
+import Confetti from 'react-confetti';
 
 import styles from './styles.module.css';
 
@@ -21,6 +22,7 @@ export function AllScreens() {
 			<Screen3 />
 			<Screen4 />
 			<Compliance />
+			<Confetti gravity={0.15} height={1080} numberOfPieces={50} width={1920} />
 			{/* <Snowfall snowflakeCount={40} speed={[0.5, 1]} wind={[0, 1]} /> */}
 		</div>
 	);
