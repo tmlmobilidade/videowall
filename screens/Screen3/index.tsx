@@ -16,6 +16,7 @@ export function Screen3() {
 	//
 	// A. Fetch data
 
+	const { data: slaData, isLoading: slaLoading, isValidating: slaValidating } = useSWR('https://api.carrismetropolitana.pt/v2/metrics/videowall/sla');
 	const { data: delaysData, isLoading: delaysLoading, isValidating: delaysValidating } = useSWR('https://api.carrismetropolitana.pt/v2/metrics/videowall/delays');
 
 	//
@@ -29,25 +30,25 @@ export function Screen3() {
 			primary_value: delaysData.data._cm_average_delay_minutes,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(formattedMinutes)}m ${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(formattedSeconds)}s`,
 			secondary_value: delaysData.data._cm_average_delay_minutes,
-			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._cm_total_until_now_count)}`,
+			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(slaData.data._cm_scheduled_rides_until_now)}`,
 		};
-	}, [delaysData]);
+	}, [delaysData, slaData]);
 
 	const delaysCmParsed = useMemo(() => {
 		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		return {
-			primary_value: delaysData.data._cm_delayed_for_more_than_five_minutes_count / delaysData.data._cm_total_until_now_count,
-			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._cm_delayed_for_more_than_five_minutes_count / delaysData.data._cm_total_until_now_count * 100)}%`,
+			primary_value: delaysData.data._cm_delayed_for_more_than_five_minutes_count / slaData.data._cm_scheduled_rides_until_now,
+			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._cm_delayed_for_more_than_five_minutes_count / slaData.data._cm_scheduled_rides_until_now * 100)}%`,
 			secondary_value: delaysData.data._cm_delayed_for_more_than_five_minutes_count,
 			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._cm_delayed_for_more_than_five_minutes_count)}`,
 		};
-	}, [delaysData]);
+	}, [delaysData, slaData]);
 
 	const delays41Parsed = useMemo(() => {
 		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		return {
-			primary_value: delaysData.data._41_delayed_for_more_than_five_minutes_count / delaysData.data._41_total_until_now_count,
-			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._41_delayed_for_more_than_five_minutes_count / delaysData.data._41_total_until_now_count * 100)}%`,
+			primary_value: delaysData.data._41_delayed_for_more_than_five_minutes_count / slaData.data._41_scheduled_rides_until_now,
+			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._41_delayed_for_more_than_five_minutes_count / slaData.data._41_scheduled_rides_until_now * 100)}%`,
 			secondary_value: delaysData.data._41_delayed_for_more_than_five_minutes_count,
 			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._41_delayed_for_more_than_five_minutes_count)}`,
 		};
@@ -56,8 +57,8 @@ export function Screen3() {
 	const delays42Parsed = useMemo(() => {
 		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		return {
-			primary_value: delaysData.data._42_delayed_for_more_than_five_minutes_count / delaysData.data._42_total_until_now_count,
-			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._42_delayed_for_more_than_five_minutes_count / delaysData.data._42_total_until_now_count * 100)}%`,
+			primary_value: delaysData.data._42_delayed_for_more_than_five_minutes_count / slaData.data._42_scheduled_rides_until_now,
+			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._42_delayed_for_more_than_five_minutes_count / slaData.data._42_scheduled_rides_until_now * 100)}%`,
 			secondary_value: delaysData.data._42_delayed_for_more_than_five_minutes_count,
 			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._42_delayed_for_more_than_five_minutes_count)}`,
 		};
@@ -66,8 +67,8 @@ export function Screen3() {
 	const delays43Parsed = useMemo(() => {
 		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		return {
-			primary_value: delaysData.data._43_delayed_for_more_than_five_minutes_count / delaysData.data._43_total_until_now_count,
-			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._43_delayed_for_more_than_five_minutes_count / delaysData.data._43_total_until_now_count * 100)}%`,
+			primary_value: delaysData.data._43_delayed_for_more_than_five_minutes_count / slaData.data._43_scheduled_rides_until_now,
+			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._43_delayed_for_more_than_five_minutes_count / slaData.data._43_scheduled_rides_until_now * 100)}%`,
 			secondary_value: delaysData.data._43_delayed_for_more_than_five_minutes_count,
 			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._43_delayed_for_more_than_five_minutes_count)}`,
 		};
@@ -76,8 +77,8 @@ export function Screen3() {
 	const delays44Parsed = useMemo(() => {
 		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		return {
-			primary_value: delaysData.data._44_delayed_for_more_than_five_minutes_count / delaysData.data._44_total_until_now_count,
-			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._44_delayed_for_more_than_five_minutes_count / delaysData.data._44_total_until_now_count * 100)}%`,
+			primary_value: delaysData.data._44_delayed_for_more_than_five_minutes_count / slaData.data._44_scheduled_rides_until_now,
+			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._44_delayed_for_more_than_five_minutes_count / slaData.data._44_scheduled_rides_until_now * 100)}%`,
 			secondary_value: delaysData.data._44_delayed_for_more_than_five_minutes_count,
 			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._44_delayed_for_more_than_five_minutes_count)}`,
 		};
@@ -92,8 +93,8 @@ export function Screen3() {
 			cells={[
 				<CardDefault
 					icon={<IconClock />}
-					isLoading={delaysLoading}
-					isValidating={delaysValidating}
+					isLoading={delaysLoading || slaLoading}
+					isValidating={delaysValidating || slaValidating}
 					sentiment={delaysCmOverview.primary_value > 3 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="CM / Atraso médio do total de viagens"
@@ -102,8 +103,8 @@ export function Screen3() {
 				/>,
 				<CardDefault
 					icon={<IconClock />}
-					isLoading={delaysLoading}
-					isValidating={delaysValidating}
+					isLoading={delaysLoading || slaLoading}
+					isValidating={delaysValidating || slaValidating}
 					sentiment={delaysCmParsed.primary_value > 0.095 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="CM / Viagens atrasadas > 5 min"
@@ -112,8 +113,8 @@ export function Screen3() {
 				/>,
 				<CardDefault
 					icon={<IconClock />}
-					isLoading={delaysLoading}
-					isValidating={delaysValidating}
+					isLoading={delaysLoading || slaLoading}
+					isValidating={delaysValidating || slaValidating}
 					sentiment={delays41Parsed.primary_value > 0.095 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="41 / Viagens atrasadas > 5 min"
@@ -122,8 +123,8 @@ export function Screen3() {
 				/>,
 				<CardDefault
 					icon={<IconClock />}
-					isLoading={delaysLoading}
-					isValidating={delaysValidating}
+					isLoading={delaysLoading || slaLoading}
+					isValidating={delaysValidating || slaValidating}
 					sentiment={delays42Parsed.primary_value > 0.095 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="42 / Viagens atrasadas > 5 min"
@@ -132,8 +133,8 @@ export function Screen3() {
 				/>,
 				<CardDefault
 					icon={<IconClock />}
-					isLoading={delaysLoading}
-					isValidating={delaysValidating}
+					isLoading={delaysLoading || slaLoading}
+					isValidating={delaysValidating || slaValidating}
 					sentiment={delays43Parsed.primary_value > 0.095 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="43 / Viagens atrasadas > 5 min"
@@ -142,8 +143,8 @@ export function Screen3() {
 				/>,
 				<CardDefault
 					icon={<IconClock />}
-					isLoading={delaysLoading}
-					isValidating={delaysValidating}
+					isLoading={delaysLoading || slaLoading}
+					isValidating={delaysValidating || slaValidating}
 					sentiment={delays44Parsed.primary_value > 0.095 ? 'bad' : 'good'}
 					timestamp={delaysData?.timestamp_resource}
 					title="44 / Viagens atrasadas > 5 min"
