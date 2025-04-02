@@ -23,7 +23,7 @@ export function Screen3() {
 	// B. Transform data
 
 	const delaysCmOverview = useMemo(() => {
-		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
+		if (!delaysData || !slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		const formattedSeconds = delaysData.data._cm_average_delay_minutes * 60 % 60;
 		const formattedMinutes = delaysData.data._cm_average_delay_minutes - formattedSeconds / 60;
 		return {
@@ -35,7 +35,7 @@ export function Screen3() {
 	}, [delaysData, slaData]);
 
 	const delaysCmParsed = useMemo(() => {
-		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
+		if (!delaysData || !slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		return {
 			primary_value: delaysData.data._cm_delayed_for_more_than_five_minutes_count / slaData.data._cm_scheduled_rides_until_now,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._cm_delayed_for_more_than_five_minutes_count / slaData.data._cm_scheduled_rides_until_now * 100)}%`,
@@ -45,7 +45,7 @@ export function Screen3() {
 	}, [delaysData, slaData]);
 
 	const delays41Parsed = useMemo(() => {
-		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
+		if (!delaysData || !slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		return {
 			primary_value: delaysData.data._41_delayed_for_more_than_five_minutes_count / slaData.data._41_scheduled_rides_until_now,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._41_delayed_for_more_than_five_minutes_count / slaData.data._41_scheduled_rides_until_now * 100)}%`,
@@ -55,7 +55,7 @@ export function Screen3() {
 	}, [delaysData]);
 
 	const delays42Parsed = useMemo(() => {
-		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
+		if (!delaysData || !slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		return {
 			primary_value: delaysData.data._42_delayed_for_more_than_five_minutes_count / slaData.data._42_scheduled_rides_until_now,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._42_delayed_for_more_than_five_minutes_count / slaData.data._42_scheduled_rides_until_now * 100)}%`,
@@ -65,7 +65,7 @@ export function Screen3() {
 	}, [delaysData]);
 
 	const delays43Parsed = useMemo(() => {
-		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
+		if (!delaysData || !slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		return {
 			primary_value: delaysData.data._43_delayed_for_more_than_five_minutes_count / slaData.data._43_scheduled_rides_until_now,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._43_delayed_for_more_than_five_minutes_count / slaData.data._43_scheduled_rides_until_now * 100)}%`,
@@ -75,7 +75,7 @@ export function Screen3() {
 	}, [delaysData]);
 
 	const delays44Parsed = useMemo(() => {
-		if (!delaysData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
+		if (!delaysData || !slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
 		return {
 			primary_value: delaysData.data._44_delayed_for_more_than_five_minutes_count / slaData.data._44_scheduled_rides_until_now,
 			primary_value_string: `${Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(delaysData.data._44_delayed_for_more_than_five_minutes_count / slaData.data._44_scheduled_rides_until_now * 100)}%`,
