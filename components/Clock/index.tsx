@@ -2,6 +2,7 @@
 
 /* * */
 
+import { Dates } from '@tmlmobilidade/utils';
 import { useEffect, useMemo, useState } from 'react';
 
 import styles from './styles.module.css';
@@ -21,7 +22,8 @@ export function Clock() {
 
 	useEffect(() => {
 		const timer = setInterval(() => {
-			setTime(new Date());
+			const now = Dates.now('Europe/Lisbon');
+			setTime(now.js_date);
 		}, 1000);
 		return () => {
 			clearInterval(timer);

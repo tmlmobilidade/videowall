@@ -8,7 +8,6 @@ import '@/styles/variables.css';
 /* * */
 
 import '@mantine/core/styles.css';
-import '@mantine/charts/styles.css';
 
 /* * */
 
