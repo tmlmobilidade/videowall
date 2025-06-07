@@ -1,6 +1,6 @@
 /* * */
 
-import { DateTime } from 'luxon';
+import { Dates } from '@tmlmobilidade/utils';
 import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
@@ -19,7 +19,7 @@ export function TimestampDisplay({ timestamp = 0 }: Props) {
 	//
 	// A. Setup variables
 
-	const [timestampLabel, setTimestampLabel] = useState('Atualizado agora');
+	const [timestampLabel, setTimestampLabel] = useState('Em atualização...');
 
 	//
 	// B. Transform data
@@ -27,22 +27,50 @@ export function TimestampDisplay({ timestamp = 0 }: Props) {
 	useEffect(() => {
 		if (!timestamp) return;
 		const updateTimestamp = () => {
-			const now = DateTime.now();
-			const date = DateTime.fromMillis(timestamp);
-			const diff = now.diff(date, ['minutes', 'seconds', 'milliseconds']);
-			const diffObj = diff.toObject();
-			if (diffObj.minutes === 0 && diffObj.seconds && diffObj.seconds > 0) {
-				const diffStr = `Atualizado há ${diffObj.seconds} segundos`;
-				setTimestampLabel(diffStr);
+			const now = Dates.now('Europe/Lisbon');
+			const diff = now.unix_timestamp - timestamp;
+			// Convert the difference in milliseconds to an object with days, hours, minutes, and seconds
+			const initSeconds = Math.floor(diff / 1000);
+			const days = Math.floor(initSeconds / (24 * 3600));
+			const hours = Math.floor((initSeconds % (24 * 3600)) / 3600);
+			const minutes = Math.floor((initSeconds % 3600) / 60);
+			const seconds = initSeconds % 60;
+			// Days
+			if (days === 1) {
+				setTimestampLabel('Atualizado há 1 dia');
 				return;
 			}
-			if (diffObj.minutes === 1) {
-				const diffStr = `Atualizado há 1 minuto e ${diffObj.seconds} segundos`;
-				setTimestampLabel(diffStr);
+			if (days > 1) {
+				setTimestampLabel(`Atualizado há ${days} dia`);
 				return;
 			}
-			const diffStr = `Atualizado há ${diffObj.minutes} minutos e ${diffObj.seconds} segundos`;
-			setTimestampLabel(diffStr);
+			// Hours
+			if (hours === 1) {
+				setTimestampLabel('Atualizado há 1 hora');
+				return;
+			}
+			if (hours > 1) {
+				setTimestampLabel(`Atualizado há ${hours} horas`);
+				return;
+			}
+			// Minutes
+			if (minutes === 1) {
+				setTimestampLabel('Atualizado há 1 minuto');
+				return;
+			}
+			if (minutes > 1) {
+				setTimestampLabel(`Atualizado há ${minutes} minutos`);
+				return;
+			}
+			// Seoncs
+			if (seconds === 1) {
+				setTimestampLabel('Atualizado há 1 segundo');
+				return;
+			}
+			if (seconds > 1) {
+				setTimestampLabel(`Atualizado há ${seconds} segundos`);
+				return;
+			}
 		};
 		updateTimestamp();
 		const interval = setInterval(updateTimestamp, 1000);
