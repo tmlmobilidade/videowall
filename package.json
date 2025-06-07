@@ -10,27 +10,19 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@helperkits/logger": "20240703.1726.24",
-		"@mantine/core": "8.0.2",
 		"@tabler/icons-react": "3.34.0",
-		"@tmlmobilidade/utils": "20250603.1604.44",
-		"luxon": "3.6.1",
+		"@tmlmobilidade/utils": "20250605.1703.12",
 		"next": "15.3.3",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
-		"recharts": "2.15.3",
 		"sharp": "0.34.2",
 		"swr": "2.3.3"
 	},
 	"devDependencies": {
 		"@carrismetropolitana/eslint": "20250418.42.41",
-		"@types/luxon": "3.6.2",
-		"@types/node": "22.15.29",
+		"@types/node": "22.15.30",
 		"@types/react": "19.1.6",
-		"@types/react-dom": "19.1.5",
-		"postcss": "8.5.4",
-		"postcss-preset-mantine": "1.17.0",
-		"postcss-simple-vars": "7.0.1",
+		"@types/react-dom": "19.1.6",
 		"typescript": "5.8.3"
 	},
 	"overrides": {

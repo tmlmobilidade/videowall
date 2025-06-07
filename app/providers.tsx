@@ -3,13 +3,11 @@
 /* * */
 
 import { AppReload } from '@/components/AppReload';
-import { theme } from '@/styles/theme';
-import { MantineProvider } from '@mantine/core';
 import { SWRConfig, SWRConfiguration } from 'swr';
 
 /* * */
 
-export default function Providers({ children }) {
+export function Providers({ children }) {
 	//
 
 	//
@@ -40,10 +38,8 @@ export default function Providers({ children }) {
 
 	return (
 		<SWRConfig value={swrSettings}>
-			<MantineProvider defaultColorScheme="auto" theme={theme}>
-				<AppReload />
-				{children}
-			</MantineProvider>
+			<AppReload />
+			{children}
 		</SWRConfig>
 	);
 

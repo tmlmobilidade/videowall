@@ -2,7 +2,6 @@
 
 import { CardDefaultSkeleton } from '@/components/CardDefaultSkeleton';
 import { TimestampDisplay } from '@/components/TimestampDisplay';
-import { Loader } from '@mantine/core';
 
 import styles from './styles.module.css';
 
@@ -46,7 +45,6 @@ export function CardDefault({ icon, isLoading = false, isValidating = false, sen
 
 			<div className={styles.footerWrapper}>
 				<TimestampDisplay timestamp={timestamp} />
-				{isValidating && <Loader color="white" opacity={0.5} size={10} />}
 			</div>
 
 		</div>

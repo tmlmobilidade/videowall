@@ -2,9 +2,13 @@
 
 /* * */
 
+import { Providers } from '@/app/providers';
 import { Inter } from 'next/font/google';
 
-import Providers from './providers';
+/* * */
+
+import '@/styles/reset.css';
+import '@/styles/variables.css';
 
 /* * */
 
