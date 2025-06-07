@@ -52,7 +52,7 @@ export function Screen3() {
 			secondary_value: delaysData.data._41_delayed_for_more_than_five_minutes_count,
 			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._41_delayed_for_more_than_five_minutes_count)}`,
 		};
-	}, [delaysData]);
+	}, [delaysData, slaData]);
 
 	const delays42Parsed = useMemo(() => {
 		if (!delaysData || !slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
@@ -62,7 +62,7 @@ export function Screen3() {
 			secondary_value: delaysData.data._42_delayed_for_more_than_five_minutes_count,
 			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._42_delayed_for_more_than_five_minutes_count)}`,
 		};
-	}, [delaysData]);
+	}, [delaysData, slaData]);
 
 	const delays43Parsed = useMemo(() => {
 		if (!delaysData || !slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
@@ -72,7 +72,7 @@ export function Screen3() {
 			secondary_value: delaysData.data._43_delayed_for_more_than_five_minutes_count,
 			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._43_delayed_for_more_than_five_minutes_count)}`,
 		};
-	}, [delaysData]);
+	}, [delaysData, slaData]);
 
 	const delays44Parsed = useMemo(() => {
 		if (!delaysData || !slaData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '-' };
@@ -82,7 +82,7 @@ export function Screen3() {
 			secondary_value: delaysData.data._44_delayed_for_more_than_five_minutes_count,
 			secondary_value_string: `${Intl.NumberFormat('pt-PT').format(delaysData.data._44_delayed_for_more_than_five_minutes_count)}`,
 		};
-	}, [delaysData]);
+	}, [delaysData, slaData]);
 
 	//
 	// C. Render components
