@@ -3,7 +3,7 @@
 /* * */
 
 import { CardDefault } from '@/components/CardDefault';
-import { Grid } from '@/components/Grid';
+import { GridArea } from '@/components/GridArea';
 import { IconCreditCardPay } from '@tabler/icons-react';
 import { useMemo } from 'react';
 import useSWR from 'swr';
@@ -44,7 +44,7 @@ export function Screen1() {
 	// C. Render components
 
 	return (
-		<Grid
+		<GridArea
 			layout="primaryWithFourDetails"
 			cells={[
 				<CardDefault

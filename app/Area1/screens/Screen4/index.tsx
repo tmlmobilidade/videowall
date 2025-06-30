@@ -4,7 +4,7 @@
 
 import { CardDefault } from '@/components/CardDefault';
 import { Clock } from '@/components/Clock';
-import { Grid } from '@/components/Grid';
+import { GridArea } from '@/components/GridArea';
 import { IconRulerMeasure } from '@tabler/icons-react';
 import { useMemo } from 'react';
 import useSWR from 'swr';
@@ -47,20 +47,9 @@ export function Screen4() {
 	// C. Render components
 
 	return (
-		<Grid
+		<GridArea
 			layout="sixDetails"
 			cells={[
-				<CardDefault
-					icon={<IconRulerMeasure />}
-					isLoading={vkmLoading}
-					isValidating={vkmValidating}
-					sentiment="normal"
-					size="lg"
-					timestamp={vkmData?.timestamp_resource}
-					title="41 / VKm Executados hoje, até agora"
-					valuePrimary={vkm41Parsed.primary_value_string}
-					valueSecondary={vkm41Parsed.secondary_value_string}
-				/>,
 				<CardDefault
 					icon={<IconRulerMeasure />}
 					isLoading={vkmLoading}
@@ -73,6 +62,17 @@ export function Screen4() {
 					valueSecondary={vkmCmParsed.secondary_value_string}
 				/>,
 				<Clock />,
+				<CardDefault
+					icon={<IconRulerMeasure />}
+					isLoading={vkmLoading}
+					isValidating={vkmValidating}
+					sentiment="normal"
+					size="lg"
+					timestamp={vkmData?.timestamp_resource}
+					title="41 / VKm Executados hoje, até agora"
+					valuePrimary={vkm41Parsed.primary_value_string}
+					valueSecondary={vkm41Parsed.secondary_value_string}
+				/>,
 			]}
 		/>
 	);

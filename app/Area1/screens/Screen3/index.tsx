@@ -3,7 +3,7 @@
 /* * */
 
 import { CardDefault } from '@/components/CardDefault';
-import { Grid } from '@/components/Grid';
+import { GridArea } from '@/components/GridArea';
 import { IconClock } from '@tabler/icons-react';
 import { useMemo } from 'react';
 import useSWR from 'swr';
@@ -57,7 +57,7 @@ export function Screen3() {
 	// C. Render components
 
 	return (
-		<Grid
+		<GridArea
 			layout="sixDetails"
 			cells={[
 				<CardDefault
