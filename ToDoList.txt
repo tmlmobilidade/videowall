@@ -1,0 +1,7 @@
+A área onde cada um vai trabalhar: 
+    Área 1: Tomás;
+    Área 2: Nit;
+    Área 3: João;
+
+O que fazer:
+    Deixar os campos longos no topo de cada "container" e criar um grande onde mostra a informação da Área
