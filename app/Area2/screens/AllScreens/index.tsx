@@ -3,10 +3,10 @@
 /* * */
 
 import { Compliance } from '@/components/Compliance';
-import { Screen1 } from '@/screens/Screen1';
-import { Screen2 } from '@/screens/Screen2';
-import { Screen3 } from '@/screens/Screen3';
-import { Screen4 } from '@/screens/Screen4';
+import { Screen1 } from 'app/Area2/screens/Screen1';
+import { Screen2 } from 'app/Area2/screens/Screen2';
+import { Screen3 } from 'app/Area2/screens/Screen3';
+import { Screen4 } from 'app/Area2/screens/Screen4';
 // import Confetti from 'react-confetti';
 // import Snowfall from 'react-snowfall';
 

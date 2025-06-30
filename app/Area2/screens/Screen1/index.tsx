@@ -17,8 +17,6 @@ export function Screen1() {
 	// A. Fetch data
 
 	const { data: validationsData, isLoading: validationsLoading, isValidating: validationsValidating } = useSWR('https://api.carrismetropolitana.pt/v2/metrics/videowall/validations');
-
-	//
 	// B. Transform data
 
 	const validationsCmParsed = useMemo(() => {
@@ -73,6 +71,5 @@ export function Screen1() {
 			]}
 		/>
 	);
-
 	//
 }

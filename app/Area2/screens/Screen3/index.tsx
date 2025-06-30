@@ -91,6 +91,7 @@ export function Screen3() {
 					valuePrimary={delays42Parsed.primary_value_string}
 					valueSecondary={delays42Parsed.secondary_value_string}
 				/>,
+
 			]}
 		/>
 	);

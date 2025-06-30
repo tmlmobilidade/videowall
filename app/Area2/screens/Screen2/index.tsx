@@ -48,6 +48,7 @@ export function Screen2() {
 		<Grid
 			layout="primaryWithFourDetails"
 			cells={[
+
 				<CardDefault
 					icon={<IconBusOff />}
 					isLoading={slaLoading}
@@ -69,7 +70,6 @@ export function Screen2() {
 					valuePrimary={sla42Parsed.primary_value_string}
 					valueSecondary={sla42Parsed.secondary_value_string}
 				/>,
-
 			]}
 		/>
 	);

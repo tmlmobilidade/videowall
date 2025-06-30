@@ -75,8 +75,10 @@ export function Screen4() {
 					valueSecondary={vkmCmParsed.secondary_value_string}
 				/>,
 				<Clock />,
+
 			]}
 		/>
+
 	);
 
 	//
