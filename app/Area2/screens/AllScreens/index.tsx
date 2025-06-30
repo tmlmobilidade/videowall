@@ -10,7 +10,7 @@ import { Screen4 } from 'app/Area2/screens/Screen4';
 // import Confetti from 'react-confetti';
 // import Snowfall from 'react-snowfall';
 
-import styles from './styles.module.css';
+import styles from '@/screens/AllScreens/styles.module.css';
 
 /* * */
 

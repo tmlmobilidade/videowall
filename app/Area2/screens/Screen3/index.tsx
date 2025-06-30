@@ -2,9 +2,9 @@
 
 /* * */
 
-import { CardDefault } from '@/components/CardDefault';
+import { CardDefaultArea } from '@/components/CardDefaultArea';
+import { GridArea } from '@/components/GridArea';
 import { IconClock } from '@tabler/icons-react';
-import { Grid } from 'app/Area2/Grid';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -58,11 +58,11 @@ export function Screen3() {
 	// C. Render components
 
 	return (
-		<Grid
+		<GridArea
 			layout="sixDetails"
 			cells={[
-				<CardDefault
-					icon={<IconClock />}
+				<CardDefaultArea
+					icon={<IconClock size={45} />}
 					isLoading={delaysLoading || slaLoading}
 					isValidating={delaysValidating || slaValidating}
 					sentiment={delaysCmOverview.primary_value > 3 ? 'bad' : 'good'}
@@ -71,18 +71,8 @@ export function Screen3() {
 					valuePrimary={delaysCmOverview.primary_value_string}
 					valueSecondary={delaysCmOverview.secondary_value_string}
 				/>,
-				<CardDefault
-					icon={<IconClock />}
-					isLoading={delaysLoading || slaLoading}
-					isValidating={delaysValidating || slaValidating}
-					sentiment={delaysCmParsed.primary_value > 0.095 ? 'bad' : 'good'}
-					timestamp={delaysData?.timestamp_resource}
-					title="CM / Viagens atrasadas > 5 min"
-					valuePrimary={delaysCmParsed.primary_value_string}
-					valueSecondary={delaysCmParsed.secondary_value_string}
-				/>,
-				<CardDefault
-					icon={<IconClock />}
+				<CardDefaultArea
+					icon={<IconClock size={45} />}
 					isLoading={delaysLoading || slaLoading}
 					isValidating={delaysValidating || slaValidating}
 					sentiment={delays42Parsed.primary_value > 0.095 ? 'bad' : 'good'}
@@ -90,6 +80,16 @@ export function Screen3() {
 					title="42 / Viagens atrasadas > 5 min"
 					valuePrimary={delays42Parsed.primary_value_string}
 					valueSecondary={delays42Parsed.secondary_value_string}
+				/>,
+				<CardDefaultArea
+					icon={<IconClock size={45} />}
+					isLoading={delaysLoading || slaLoading}
+					isValidating={delaysValidating || slaValidating}
+					sentiment={delaysCmParsed.primary_value > 0.095 ? 'bad' : 'good'}
+					timestamp={delaysData?.timestamp_resource}
+					title="CM / Viagens atrasadas > 5 min"
+					valuePrimary={delaysCmParsed.primary_value_string}
+					valueSecondary={delaysCmParsed.secondary_value_string}
 				/>,
 
 			]}

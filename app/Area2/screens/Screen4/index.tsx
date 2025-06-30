@@ -2,10 +2,10 @@
 
 /* * */
 
-import { CardDefault } from '@/components/CardDefault';
+import { CardDefaultArea } from '@/components/CardDefaultArea';
 import { Clock } from '@/components/Clock';
+import { GridArea } from '@/components/GridArea';
 import { IconRulerMeasure } from '@tabler/icons-react';
-import { Grid } from 'app/Area2/Grid';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -48,11 +48,11 @@ export function Screen4() {
 	// C. Render components
 
 	return (
-		<Grid
+		<GridArea
 			layout="sixDetails"
 			cells={[
-				<CardDefault
-					icon={<IconRulerMeasure />}
+				<CardDefaultArea
+					icon={<IconRulerMeasure size={45} />}
 					isLoading={vkmLoading}
 					isValidating={vkmValidating}
 					sentiment="normal"
@@ -62,9 +62,8 @@ export function Screen4() {
 					valuePrimary={vkm42Parsed.primary_value_string}
 					valueSecondary={vkm42Parsed.secondary_value_string}
 				/>,
-
-				<CardDefault
-					icon={<IconRulerMeasure />}
+				<CardDefaultArea
+					icon={<IconRulerMeasure size={45} />}
 					isLoading={vkmLoading}
 					isValidating={vkmValidating}
 					sentiment="normal"
