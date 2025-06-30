@@ -4,8 +4,8 @@
 
 import { CardDefault } from '@/components/CardDefault';
 import { Clock } from '@/components/Clock';
-import { Grid } from '@/components/Grid';
 import { IconRulerMeasure } from '@tabler/icons-react';
+import { Grid } from 'app/Area2/Grid';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 

@@ -1,0 +1,66 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: grid;
+	gap: 15px;
+	align-items: stretch;
+	justify-content: stretch;
+	padding: 15px;
+	overflow: hidden;
+}
+
+.cell {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.cell:nth-child(1) {
+	grid-area: one;
+}
+
+.cell:nth-child(2) {
+	grid-area: two;
+}
+
+.cell:nth-child(3) {
+	grid-area: three;
+}
+
+.cell:nth-child(4) {
+	grid-area: four;
+}
+
+.cell:nth-child(5) {
+	grid-area: five;
+}
+
+.cell:nth-child(6) {
+	grid-area: six;
+}
+
+
+/* * */
+/* LAYOUTS */
+
+.primaryWithFourDetails {
+	grid-template:
+		"one one" 4fr
+		"two three" 4fr
+		"four five" 1fr / 3fr 3fr;
+}
+
+.twoDetailsWithPrimary {
+	grid-template:
+		"one two" 3fr
+		"three four" 3fr
+		"five five" 4fr / 3fr 3fr;
+}
+
+.sixDetails {
+	grid-template:
+		"one two" 3fr
+		"three four" 1fr
+		"five six" 1fr / 3fr 3fr;
+}

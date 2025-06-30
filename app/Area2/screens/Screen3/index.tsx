@@ -3,8 +3,8 @@
 /* * */
 
 import { CardDefault } from '@/components/CardDefault';
-import { Grid } from '@/components/Grid';
 import { IconClock } from '@tabler/icons-react';
+import { Grid } from 'app/Area2/Grid';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
