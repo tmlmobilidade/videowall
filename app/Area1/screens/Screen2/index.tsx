@@ -2,7 +2,7 @@
 
 /* * */
 
-import { CardDefault } from '@/components/CardDefault';
+import { CardDefaultArea } from '@/components/CardDefaultArea';
 import { GridArea } from '@/components/GridArea';
 import { IconBusOff } from '@tabler/icons-react';
 import { useMemo } from 'react';
@@ -47,18 +47,8 @@ export function Screen2() {
 		<GridArea
 			layout="primaryWithFourDetails"
 			cells={[
-				<CardDefault
-					icon={<IconBusOff />}
-					isLoading={slaLoading}
-					isValidating={slaValidating}
-					sentiment={slaCmParsed.secondary_value > 0.05 ? 'bad' : 'good'}
-					timestamp={slaData?.timestamp_resource}
-					title="CM / Viagens não executadas hoje, até agora"
-					valuePrimary={slaCmParsed.primary_value_string}
-					valueSecondary={slaCmParsed.secondary_value_string}
-				/>,
-				<CardDefault
-					icon={<IconBusOff />}
+				<CardDefaultArea
+					icon={<IconBusOff size={45} />}
 					isLoading={slaLoading}
 					isValidating={slaValidating}
 					sentiment={sla41Parsed.secondary_value > 0.05 ? 'bad' : 'good'}
@@ -66,6 +56,16 @@ export function Screen2() {
 					title="41 / Viagens não executadas hoje, até agora"
 					valuePrimary={sla41Parsed.primary_value_string}
 					valueSecondary={sla41Parsed.secondary_value_string}
+				/>,
+				<CardDefaultArea
+					icon={<IconBusOff size={45} />}
+					isLoading={slaLoading}
+					isValidating={slaValidating}
+					sentiment={slaCmParsed.secondary_value > 0.05 ? 'bad' : 'good'}
+					timestamp={slaData?.timestamp_resource}
+					title="CM / Viagens não executadas hoje, até agora"
+					valuePrimary={slaCmParsed.primary_value_string}
+					valueSecondary={slaCmParsed.secondary_value_string}
 				/>,
 			]}
 		/>

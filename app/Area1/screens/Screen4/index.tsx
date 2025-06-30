@@ -2,7 +2,7 @@
 
 /* * */
 
-import { CardDefault } from '@/components/CardDefault';
+import { CardDefaultArea } from '@/components/CardDefaultArea';
 import { Clock } from '@/components/Clock';
 import { GridArea } from '@/components/GridArea';
 import { IconRulerMeasure } from '@tabler/icons-react';
@@ -50,20 +50,8 @@ export function Screen4() {
 		<GridArea
 			layout="sixDetails"
 			cells={[
-				<CardDefault
-					icon={<IconRulerMeasure />}
-					isLoading={vkmLoading}
-					isValidating={vkmValidating}
-					sentiment="normal"
-					size="lg"
-					timestamp={vkmData?.timestamp_resource}
-					title="CM / VKm Executados hoje, até agora"
-					valuePrimary={vkmCmParsed.primary_value_string}
-					valueSecondary={vkmCmParsed.secondary_value_string}
-				/>,
-				<Clock />,
-				<CardDefault
-					icon={<IconRulerMeasure />}
+				<CardDefaultArea
+					icon={<IconRulerMeasure size={45} />}
 					isLoading={vkmLoading}
 					isValidating={vkmValidating}
 					sentiment="normal"
@@ -72,6 +60,18 @@ export function Screen4() {
 					title="41 / VKm Executados hoje, até agora"
 					valuePrimary={vkm41Parsed.primary_value_string}
 					valueSecondary={vkm41Parsed.secondary_value_string}
+				/>,
+				<Clock />,
+				<CardDefaultArea
+					icon={<IconRulerMeasure size={45} />}
+					isLoading={vkmLoading}
+					isValidating={vkmValidating}
+					sentiment="normal"
+					size="lg"
+					timestamp={vkmData?.timestamp_resource}
+					title="CM / VKm Executados hoje, até agora"
+					valuePrimary={vkmCmParsed.primary_value_string}
+					valueSecondary={vkmCmParsed.secondary_value_string}
 				/>,
 			]}
 		/>

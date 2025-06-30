@@ -28,15 +28,13 @@
 	grid-area: three;
 }
 
-
-
 /* * */
 /* LAYOUTS */
 
 .primaryWithFourDetails {
 	grid-template:
-		"one one" 1fr
-		"two two" 2fr / 1fr 1fr
+		"one one" 2fr
+		"two two" 1fr
 }
 
 .twoDetailsWithPrimary {
@@ -47,6 +45,6 @@
 
 .sixDetails {
 	grid-template:
-		"one two" 1fr
-		"three three" 2fr / 1fr 1fr
+		"one one" 2fr
+		"two three" 1fr  
 }

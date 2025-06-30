@@ -2,7 +2,7 @@
 
 /* * */
 
-import { CardDefault } from '@/components/CardDefault';
+import { CardDefaultArea } from '@/components/CardDefaultArea';
 import { GridArea } from '@/components/GridArea';
 import { IconCreditCardPay } from '@tabler/icons-react';
 import { useMemo } from 'react';
@@ -47,18 +47,8 @@ export function Screen1() {
 		<GridArea
 			layout="primaryWithFourDetails"
 			cells={[
-				<CardDefault
-					icon={<IconCreditCardPay />}
-					isLoading={validationsLoading}
-					isValidating={validationsValidating}
-					sentiment={validationsCmParsed.secondary_value < 1 ? 'normal' : 'good'}
-					timestamp={validationsData?.timestamp_resource}
-					title="CM / Passageiros transportados hoje, até agora"
-					valuePrimary={validationsCmParsed.primary_value_string}
-					valueSecondary={validationsCmParsed.secondary_value_string}
-				/>,
-				<CardDefault
-					icon={<IconCreditCardPay />}
+				<CardDefaultArea
+					icon={<IconCreditCardPay size={45} />}
 					isLoading={validationsLoading}
 					isValidating={validationsValidating}
 					sentiment={validations41Parsed.secondary_value < 1 ? 'normal' : 'good'}
@@ -66,6 +56,16 @@ export function Screen1() {
 					title="41 / Passageiros transportados hoje, até agora"
 					valuePrimary={validations41Parsed.primary_value_string}
 					valueSecondary={validations41Parsed.secondary_value_string}
+				/>,
+				<CardDefaultArea
+					icon={<IconCreditCardPay size={45} />}
+					isLoading={validationsLoading}
+					isValidating={validationsValidating}
+					sentiment={validationsCmParsed.secondary_value < 1 ? 'normal' : 'good'}
+					timestamp={validationsData?.timestamp_resource}
+					title="CM / Passageiros transportados hoje, até agora"
+					valuePrimary={validationsCmParsed.primary_value_string}
+					valueSecondary={validationsCmParsed.secondary_value_string}
 				/>,
 			]}
 		/>
