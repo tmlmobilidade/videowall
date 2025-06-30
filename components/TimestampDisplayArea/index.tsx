@@ -13,7 +13,7 @@ interface Props {
 
 /* * */
 
-export function TimestampDisplay({ timestamp = 0 }: Props) {
+export function TimestampDisplayArea({ timestamp = 0 }: Props) {
 	//
 
 	//

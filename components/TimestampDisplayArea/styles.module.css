@@ -3,7 +3,7 @@
 
 .container {
   line-height: 1;
-  font-size: 10px;
+  font-size: 30px;
   font-weight: var(--font-weight-medium);
   text-transform: uppercase;
   color: inherit;

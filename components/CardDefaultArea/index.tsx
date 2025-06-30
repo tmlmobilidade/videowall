@@ -1,7 +1,7 @@
 /* * */
 
 import { CardDefaultSkeleton } from '@/components/CardDefaultSkeleton';
-import { TimestampDisplay } from '@/components/TimestampDisplay';
+import { TimestampDisplayArea } from '@/components/TimestampDisplayArea';
 
 import styles from './styles.module.css';
 
@@ -44,7 +44,7 @@ export function CardDefaultArea({ icon, isLoading = false, isValidating = false,
 			</div>
 
 			<div className={styles.footerWrapper}>
-				<TimestampDisplay timestamp={timestamp} />
+				<TimestampDisplayArea timestamp={timestamp} />
 			</div>
 
 		</div>
