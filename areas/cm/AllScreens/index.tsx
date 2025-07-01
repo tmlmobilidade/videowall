@@ -2,15 +2,15 @@
 
 /* * */
 
+import { Screen1 } from '@/areas/cm/Screen1';
+import { Screen2 } from '@/areas/cm/Screen2';
+import { Screen3 } from '@/areas/cm/Screen3';
+import { Screen4 } from '@/areas/cm/Screen4';
 import { Compliance } from '@/components/Compliance';
-import { Screen1 } from 'app/Area2/screens/Screen1';
-import { Screen2 } from 'app/Area2/screens/Screen2';
-import { Screen3 } from 'app/Area2/screens/Screen3';
-import { Screen4 } from 'app/Area2/screens/Screen4';
 // import Confetti from 'react-confetti';
 // import Snowfall from 'react-snowfall';
 
-import styles from '@/screens/AllScreens/styles.module.css';
+import styles from './styles.module.css';
 
 /* * */
 

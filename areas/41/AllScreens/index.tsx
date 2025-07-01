@@ -11,7 +11,7 @@ import { Screen4 } from '../Screen4/index';
 // import Confetti from 'react-confetti';
 // import Snowfall from 'react-snowfall';
 
-import styles from '@/screens/AllScreens/styles.module.css';
+import styles from '@/areas/cm/AllScreens/styles.module.css';
 
 /* * */
 

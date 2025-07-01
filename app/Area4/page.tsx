@@ -1,6 +1,6 @@
 /* * */
 
-import { AllScreens } from './screens/AllScreens';
+import { AllScreens } from '@/areas/44/AllScreens';
 
 /* * */
 

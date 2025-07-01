@@ -3,14 +3,15 @@
 /* * */
 
 import { Compliance } from '@/components/Compliance';
-import { Screen1 } from '@/screens/Screen1';
-import { Screen2 } from '@/screens/Screen2';
-import { Screen3 } from '@/screens/Screen3';
-import { Screen4 } from '@/screens/Screen4';
+
+import { Screen1 } from '../Screen1/index';
+import { Screen2 } from '../Screen2/index';
+import { Screen3 } from '../Screen3/index';
+import { Screen4 } from '../Screen4/index';
 // import Confetti from 'react-confetti';
 // import Snowfall from 'react-snowfall';
 
-import styles from './styles.module.css';
+import styles from '@/areas/cm/AllScreens/styles.module.css';
 
 /* * */
 
