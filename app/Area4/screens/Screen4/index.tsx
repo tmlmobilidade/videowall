@@ -32,17 +32,17 @@ export function Screen4() {
 			// secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._cm_scheduled_vkm_until_now / 1000),
 		};
 	}, [vkmData]);
-
-	const vkm41Parsed = useMemo(() => {
+	const vkm44Parsed = useMemo(() => {
 		if (!vkmData) return { primary_value: 0, secondary_value: 0, secondary_value_string: '?%' };
 		return {
-			primary_value: vkmData.data._41_simple_three_events_or_simple_one_validation_transaction_vkm_until_now,
-			primary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._41_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / 1000),
-			secondary_value: vkmData.data._41_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / vkmData.data._41_scheduled_vkm_until_now,
-			secondary_value_string: `${parseFloat(((vkmData.data._41_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._41_scheduled_vkm_until_now).toFixed(2))}%`,
-			// secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._41_scheduled_vkm_until_now / 1000),
+			primary_value: vkmData.data._44_simple_three_events_or_simple_one_validation_transaction_vkm_until_now,
+			primary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._44_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / 1000),
+			secondary_value: vkmData.data._44_simple_three_events_or_simple_one_validation_transaction_vkm_until_now / vkmData.data._44_scheduled_vkm_until_now,
+			secondary_value_string: `${parseFloat(((vkmData.data._44_simple_three_events_or_simple_one_validation_transaction_vkm_until_now * 100) / vkmData.data._44_scheduled_vkm_until_now).toFixed(2))}%`,
+			// secondary_value_string: Intl.NumberFormat('pt-PT', { maximumFractionDigits: 0 }).format(vkmData.data._44_scheduled_vkm_until_now / 1000),
 		};
 	}, [vkmData]);
+
 	//
 	// C. Render components
 
@@ -57,9 +57,9 @@ export function Screen4() {
 					sentiment="normal"
 					size="lg"
 					timestamp={vkmData?.timestamp_resource}
-					title="41 / VKm Executados hoje, até agora"
-					valuePrimary={vkm41Parsed.primary_value_string}
-					valueSecondary={vkm41Parsed.secondary_value_string}
+					title="44 / VKm Executados hoje, até agora"
+					valuePrimary={vkm44Parsed.primary_value_string}
+					valueSecondary={vkm44Parsed.secondary_value_string}
 				/>,
 				<CardDefaultArea
 					icon={<IconRulerMeasure size={45} />}
