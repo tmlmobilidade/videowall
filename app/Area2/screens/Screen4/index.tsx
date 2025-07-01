@@ -67,7 +67,7 @@ export function Screen4() {
 					isLoading={vkmLoading}
 					isValidating={vkmValidating}
 					sentiment="normal"
-					size="lg"
+					size="md"
 					timestamp={vkmData?.timestamp_resource}
 					title="CM / VKm Executados hoje, até agora"
 					valuePrimary={vkmCmParsed.primary_value_string}
