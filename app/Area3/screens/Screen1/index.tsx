@@ -52,6 +52,7 @@ export function Screen1() {
 					isLoading={validationsLoading}
 					isValidating={validationsValidating}
 					sentiment={validations43Parsed.secondary_value < 1 ? 'normal' : 'good'}
+					size="lg"
 					timestamp={validationsData?.timestamp_resource}
 					title="43 / Passageiros transportados hoje, até agora"
 					valuePrimary={validations43Parsed.primary_value_string}
@@ -62,6 +63,7 @@ export function Screen1() {
 					isLoading={validationsLoading}
 					isValidating={validationsValidating}
 					sentiment={validationsCmParsed.secondary_value < 1 ? 'normal' : 'good'}
+					size="lg"
 					timestamp={validationsData?.timestamp_resource}
 					title="CM / Passageiros transportados hoje, até agora"
 					valuePrimary={validationsCmParsed.primary_value_string}
