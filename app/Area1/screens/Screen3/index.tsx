@@ -65,6 +65,7 @@ export function Screen3() {
 					isLoading={delaysLoading || slaLoading}
 					isValidating={delaysValidating || slaValidating}
 					sentiment={delays41Parsed.primary_value > 0.095 ? 'bad' : 'good'}
+					size="lg"
 					timestamp={delaysData?.timestamp_resource}
 					title="41 / Viagens atrasadas > 5 min"
 					valuePrimary={delays41Parsed.primary_value_string}
@@ -75,6 +76,7 @@ export function Screen3() {
 					isLoading={delaysLoading || slaLoading}
 					isValidating={delaysValidating || slaValidating}
 					sentiment={delaysCmOverview.primary_value > 3 ? 'bad' : 'good'}
+					size="lg"
 					timestamp={delaysData?.timestamp_resource}
 					title="CM / Atraso médio do total de viagens"
 					valuePrimary={delaysCmOverview.primary_value_string}
@@ -85,6 +87,7 @@ export function Screen3() {
 					isLoading={delaysLoading || slaLoading}
 					isValidating={delaysValidating || slaValidating}
 					sentiment={delaysCmParsed.primary_value > 0.095 ? 'bad' : 'good'}
+					size="lg"
 					timestamp={delaysData?.timestamp_resource}
 					title="CM / Viagens atrasadas > 5 min"
 					valuePrimary={delaysCmParsed.primary_value_string}

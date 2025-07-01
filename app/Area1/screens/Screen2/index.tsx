@@ -52,6 +52,7 @@ export function Screen2() {
 					isLoading={slaLoading}
 					isValidating={slaValidating}
 					sentiment={sla41Parsed.secondary_value > 0.05 ? 'bad' : 'good'}
+					size="lg"
 					timestamp={slaData?.timestamp_resource}
 					title="41 / Viagens não executadas hoje, até agora"
 					valuePrimary={sla41Parsed.primary_value_string}
@@ -62,6 +63,7 @@ export function Screen2() {
 					isLoading={slaLoading}
 					isValidating={slaValidating}
 					sentiment={slaCmParsed.secondary_value > 0.05 ? 'bad' : 'good'}
+					size="lg"
 					timestamp={slaData?.timestamp_resource}
 					title="CM / Viagens não executadas hoje, até agora"
 					valuePrimary={slaCmParsed.primary_value_string}

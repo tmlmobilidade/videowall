@@ -34,7 +34,7 @@
 .primaryWithFourDetails {
 	grid-template:
 		"one one" 2fr
-		"two two" 1fr
+		"two two" 2fr
 }
 
 .twoDetailsWithPrimary {
@@ -46,5 +46,5 @@
 .sixDetails {
 	grid-template:
 		"one one" 2fr
-		"two three" 1fr  
+		"two three" 2fr / 1fr 1fr
 }

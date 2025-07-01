@@ -31,7 +31,7 @@ export function CardDefaultArea({ icon, isLoading = false, isValidating = false,
 	}
 
 	return (
-		<div className={`${styles.container} ${sentiment && styles[sentiment]} ${size && styles[size]} `}>
+		<div className={styles.container} data-sentiment={sentiment} data-size={size}>
 
 			<div className={styles.headerWrapper}>
 				{icon && <div className={styles.headerIcon}>{icon}</div>}
