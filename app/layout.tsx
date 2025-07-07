@@ -1,9 +1,9 @@
 /* * */
 
-import { redirect } from 'next/navigation';
+import { type PropsWithChildren } from 'react';
 
 /* * */
 
-export default function RootLayout() {
-	redirect('/cm');
+export default function RootLayout({ children }: PropsWithChildren) {
+	return children;
 }
