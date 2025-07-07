@@ -4,6 +4,6 @@ import { redirect } from 'next/navigation';
 
 /* * */
 
-export default function Page() {
+export default function RootLayout() {
 	redirect('/cm');
 }
