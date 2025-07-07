@@ -31,7 +31,7 @@ export function CardDefault({ icon, isLoading = false, isValidating = false, sen
 	}
 
 	return (
-		<div className={`${styles.container} ${sentiment && styles[sentiment]} ${size && styles[size]} `}>
+		<div className={`${styles.container} ${sentiment && styles[sentiment]} ${size && styles[size]} `} data-validating={isValidating}>
 
 			<div className={styles.headerWrapper}>
 				{icon && <div className={styles.headerIcon}>{icon}</div>}
