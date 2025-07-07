@@ -19,12 +19,11 @@ export function Providers({ children }) {
 			if (!res.ok) {
 				const errorDetails = await res.json();
 				const error = new Error(errorDetails.message || 'An error occurred while fetching data.');
-				const customError = {
+				throw {
 					...error,
 					description: errorDetails.description || 'No additional information was provided by the API.',
 					status: res.status,
 				};
-				throw customError;
 			}
 			return res.json();
 		},
