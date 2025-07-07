@@ -2,10 +2,10 @@
 
 /* * */
 
-import { Screen1 } from '@/areas/41/Screen1/index';
-import { Screen2 } from '@/areas/41/Screen2/index';
-import { Screen3 } from '@/areas/41/Screen3/index';
-import { Screen4 } from '@/areas/41/Screen4/index';
+import { Screen1 } from '@/areas/41/Screen1';
+import { Screen2 } from '@/areas/41/Screen2';
+import { Screen3 } from '@/areas/41/Screen3';
+import { Screen4 } from '@/areas/41/Screen4';
 
 import styles from '@/areas/cm/AllScreens/styles.module.css';
 
