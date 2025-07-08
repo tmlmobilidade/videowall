@@ -16,7 +16,7 @@ import styles from './styles.module.css';
 
 export function AllScreens() {
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} style={{ height: 1080, width: 1920 }}>
 			<Screen1 />
 			<Screen2 />
 			<Screen3 />
