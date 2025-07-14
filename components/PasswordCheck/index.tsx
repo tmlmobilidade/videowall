@@ -51,7 +51,7 @@ export function PasswordCheck({ children, id, password }: PropsWithChildren<Pass
 	}
 
 	return (
-		<div className={styles.overlay}>
+		<form className={styles.overlay} onSubmit={handleValidate}>
 
 			<PasswordInput
 				className={styles.passwordInput}
@@ -64,11 +64,12 @@ export function PasswordCheck({ children, id, password }: PropsWithChildren<Pass
 			<Button
 				className={styles.validateButton}
 				onClick={handleValidate}
+				type="submit"
 			>
 				Validate
 			</Button>
 
-		</div>
+		</form>
 	);
 
 	//
