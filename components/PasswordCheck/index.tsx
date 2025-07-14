@@ -4,7 +4,7 @@
 
 import { Button, PasswordInput } from '@mantine/core';
 import { useLocalStorage } from '@mantine/hooks';
-import { PropsWithChildren, useState } from 'react';
+import { type FormEvent, type PropsWithChildren, useState } from 'react';
 
 import styles from './styles.module.css';
 
@@ -31,7 +31,8 @@ export function PasswordCheck({ children, id, password }: PropsWithChildren<Pass
 	//
 	// B. Handle actions
 
-	const handleValidate = () => {
+	const handleValidate = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
 		if (inputValue !== password) {
 			setIsError(true);
 			setInputValue('');
@@ -63,7 +64,6 @@ export function PasswordCheck({ children, id, password }: PropsWithChildren<Pass
 
 			<Button
 				className={styles.validateButton}
-				onClick={handleValidate}
 				type="submit"
 			>
 				Validate
