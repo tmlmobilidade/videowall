@@ -3,11 +3,13 @@
 /* * */
 
 import { Providers } from '@/providers/providers';
+import { MantineProvider } from '@mantine/core';
 import { Inter } from 'next/font/google';
 import { type PropsWithChildren } from 'react';
 
 /* * */
 
+import '@mantine/core/styles.layer.css';
 import '@/styles/reset.css';
 import '@/styles/variables.css';
 
@@ -32,7 +34,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
 	return (
 		<html className={inter.variable}>
 			<body>
-				<Providers>{children}</Providers>
+				<MantineProvider>
+					<Providers>
+						{children}
+					</Providers>
+				</MantineProvider>
 			</body>
 		</html>
 	);
