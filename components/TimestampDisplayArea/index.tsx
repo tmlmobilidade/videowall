@@ -1,6 +1,6 @@
 /* * */
 
-import { Dates } from '@tmlmobilidade/utils';
+import { Dates } from '@tmlmobilidade/dates';
 import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
