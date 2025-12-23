@@ -21,7 +21,7 @@ export function AllScreens() {
 	//
 	// A. Setup variables
 
-	const [snowEnabled] = useQueryState('snow', { defaultValue: '0' });
+	const [snowEnabled] = useQueryState('snow', { defaultValue: '1' });
 
 	//
 	// B. Render components
