@@ -8,8 +8,8 @@ import { Screen3 } from '@/areas/cm/Screen3';
 import { Screen4 } from '@/areas/cm/Screen4';
 import { Compliance } from '@/components/Compliance';
 // import Confetti from 'react-confetti';
-import { useQueryState } from 'nuqs';
-import Snowfall from 'react-snowfall';
+// import { useQueryState } from 'nuqs';
+// import Snowfall from 'react-snowfall';
 
 import styles from './styles.module.css';
 
@@ -21,7 +21,7 @@ export function AllScreens() {
 	//
 	// A. Setup variables
 
-	const [snowEnabled] = useQueryState('snow', { defaultValue: '1' });
+	// const [snowEnabled] = useQueryState('snow', { defaultValue: '1' });
 
 	//
 	// B. Render components
@@ -34,7 +34,7 @@ export function AllScreens() {
 			<Screen4 />
 			<Compliance />
 			{/* <Confetti height={1080} numberOfPieces={50} width={1920} /> */}
-			{snowEnabled === '1' && <Snowfall snowflakeCount={40} speed={[0.5, 1]} wind={[0, 1]} />}
+			{/* {snowEnabled === '1' && <Snowfall snowflakeCount={40} speed={[0.5, 1]} wind={[0, 1]} />} */}
 		</div>
 	);
 
