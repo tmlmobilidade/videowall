@@ -16,6 +16,7 @@
 		"@tabler/icons-react": "3.36.0",
 		"@tmlmobilidade/dates": "20251212.1456.57",
 		"@tmlmobilidade/utils": "20251212.1456.57",
+		"canvas-confetti": "1.9.4",
 		"next": "16.0.10",
 		"nuqs": "2.8.5",
 		"react": "19.2.3",
@@ -26,6 +27,7 @@
 	},
 	"devDependencies": {
 		"@carrismetropolitana/eslint": "20250622.1204.50",
+		"@types/canvas-confetti": "1.9.0",
 		"@types/node": "25.0.2",
 		"@types/react": "19.2.7",
 		"@types/react-dom": "19.2.3",

@@ -5,8 +5,22 @@
 import { CardDefault } from '@/components/CardDefault';
 import { Grid } from '@/components/Grid';
 import { IconCreditCardPay } from '@tabler/icons-react';
+import confetti from 'canvas-confetti';
 import { useMemo } from 'react';
 import useSWR from 'swr';
+
+/* * */
+
+const TOTAL_VALIDATIONS_MILESTONE = 200_000_000;
+
+const CONFETTI_CANNONS = [
+	{ angle: 60, origin: { x: 0, y: 1 } },
+	{ angle: 120, origin: { x: 1, y: 1 } },
+];
+
+function fireConfetti() {
+	CONFETTI_CANNONS.forEach(cannon => confetti({ ...cannon, particleCount: 250, scalar: 3, spread: 55, startVelocity: 90, ticks: 400 }));
+}
 
 /* * */
 
@@ -16,7 +30,13 @@ export function Screen1() {
 	//
 	// A. Fetch data
 
-	const { data: validationsData, isLoading: validationsLoading, isValidating: validationsValidating } = useSWR('https://api.carrismetropolitana.pt/v2/metrics/videowall/validations');
+	const { data: validationsData, isLoading: validationsLoading, isValidating: validationsValidating } = useSWR('https://api.carrismetropolitana.pt/v2/metrics/videowall/validations', {
+		onSuccess: (data) => {
+			if (data?.data?._cm_total_valid_count >= TOTAL_VALIDATIONS_MILESTONE) {
+				fireConfetti();
+			}
+		},
+	});
 
 	//
 	// B. Transform data
@@ -28,6 +48,17 @@ export function Screen1() {
 			primary_value_string: Intl.NumberFormat('pt-PT').format(validationsData.data._cm_today_valid_count),
 			secondary_value: validationsData.data._cm_today_valid_count / validationsData.data._cm_last_week_valid_count,
 			secondary_value_string: `${parseFloat(((validationsData.data._cm_today_valid_count * 100) / validationsData.data._cm_last_week_valid_count).toFixed(2))}%`,
+		};
+	}, [validationsData]);
+
+	const validationsCmTotalParsed = useMemo(() => {
+		if (!validationsData) return { primary_value_detail_string: '', primary_value_string: '?', secondary_value_string: '?%' };
+		const total = validationsData.data._cm_total_valid_count;
+		const remainder = String(total % 1_000_000).padStart(6, '0');
+		return {
+			primary_value_detail_string: `${remainder.slice(0, 3)} ${remainder.slice(3)}`,
+			primary_value_string: Intl.NumberFormat('pt-PT').format(Math.floor(total / 1_000_000)),
+			secondary_value_string: `${parseFloat(((total * 100) / TOTAL_VALIDATIONS_MILESTONE).toFixed(2))}%`,
 		};
 	}, [validationsData]);
 
@@ -76,7 +107,7 @@ export function Screen1() {
 
 	return (
 		<Grid
-			layout="primaryWithFourDetails"
+			layout="sixDetails"
 			cells={[
 				<CardDefault
 					icon={<IconCreditCardPay />}
@@ -87,6 +118,17 @@ export function Screen1() {
 					title="CM / Passageiros transportados hoje, até agora"
 					valuePrimary={validationsCmParsed.primary_value_string}
 					valueSecondary={validationsCmParsed.secondary_value_string}
+				/>,
+				<CardDefault
+					icon={<IconCreditCardPay />}
+					isLoading={validationsLoading}
+					isValidating={validationsValidating}
+					sentiment="normal"
+					timestamp={validationsData?.timestamp_resource}
+					title="CM / Total de validações, desde o início do ano"
+					valuePrimary={validationsCmTotalParsed.primary_value_string}
+					valuePrimaryDetail={validationsCmTotalParsed.primary_value_detail_string}
+					valueSecondary={validationsCmTotalParsed.secondary_value_string}
 				/>,
 				<CardDefault
 					icon={<IconCreditCardPay />}

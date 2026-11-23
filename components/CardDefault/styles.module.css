@@ -68,10 +68,24 @@
 	justify-content: flex-start;
 }
 
+.valuePrimaryWrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+	align-items: baseline;
+}
+
 .valuePrimary {
 	font-weight: var(--font-weight-bold);
 	line-height: 1;
 	color: inherit;
+}
+
+.valuePrimaryDetail {
+	font-weight: var(--font-weight-bold);
+	line-height: 1;
+	color: inherit;
+	opacity: 0.5;
 }
 
 .valueSecondary {
@@ -110,6 +124,7 @@
 	font-size: 60px;
 }
 
+.lg .valuePrimaryDetail,
 .lg .valueSecondary {
 	font-size: 30px;
 }
@@ -118,6 +133,7 @@
 	font-size: 40px;
 }
 
+.md .valuePrimaryDetail,
 .md .valueSecondary {
 	font-size: 20px;
 }

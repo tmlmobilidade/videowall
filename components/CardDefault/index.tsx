@@ -16,12 +16,13 @@ interface Props {
 	timestamp?: number
 	title?: string
 	valuePrimary?: number | string
+	valuePrimaryDetail?: number | string
 	valueSecondary?: number | string
 }
 
 /* * */
 
-export function CardDefault({ icon, isLoading = false, isValidating = false, sentiment = 'normal', size = 'lg', timestamp = 0, title = '', valuePrimary = 1, valueSecondary = 1 }: Props) {
+export function CardDefault({ icon, isLoading = false, isValidating = false, sentiment = 'normal', size = 'lg', timestamp = 0, title = '', valuePrimary = 1, valuePrimaryDetail, valueSecondary }: Props) {
 	//
 
 	if (isLoading) {
@@ -39,7 +40,10 @@ export function CardDefault({ icon, isLoading = false, isValidating = false, sen
 			</div>
 
 			<div className={styles.contentWrapper}>
-				<p className={styles.valuePrimary}>{valuePrimary}</p>
+				<div className={styles.valuePrimaryWrapper}>
+					<p className={styles.valuePrimary}>{valuePrimary}</p>
+					{valuePrimaryDetail && <p className={styles.valuePrimaryDetail}>{valuePrimaryDetail}</p>}
+				</div>
 				{valueSecondary && <p className={styles.valueSecondary}>{valueSecondary}</p>}
 			</div>
 
