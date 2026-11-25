@@ -32,6 +32,12 @@
 	border-color: var(--palette-orange-500);
 }
 
+.highlight {
+	color: var(--palette-purple-500);
+	background-color: var(--palette-purple-100);
+	border-color: var(--palette-purple-500);
+}
+
 /* * */
 /* HEADER */
 
@@ -114,6 +120,10 @@
 
 .bad .footerWrapper {
 	color: var(--palette-orange-300);
+}
+
+.highlight .footerWrapper {
+	color: var(--palette-purple-300);
 }
 
 

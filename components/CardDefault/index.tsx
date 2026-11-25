@@ -11,7 +11,7 @@ interface Props {
 	icon?: React.JSX.Element
 	isLoading?: boolean
 	isValidating?: boolean
-	sentiment: 'bad' | 'good' | 'normal'
+	sentiment: 'bad' | 'good' | 'highlight' | 'normal'
 	size?: 'lg' | 'md' | 'sm'
 	timestamp?: number
 	title?: string

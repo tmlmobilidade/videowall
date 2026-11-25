@@ -123,7 +123,7 @@ export function Screen1() {
 					icon={<IconCreditCardPay />}
 					isLoading={validationsLoading}
 					isValidating={validationsValidating}
-					sentiment="normal"
+					sentiment="highlight"
 					timestamp={validationsData?.timestamp_resource}
 					title="CM / Total de validações, desde o início do ano"
 					valuePrimary={validationsCmTotalParsed.primary_value_string}
